@@ -20,7 +20,7 @@ const Navbar = () => {
         },
       }}
     >
-      <Toolbar sx={{ padding: "0 1.6rem !important", width: "96%" }}>
+      <Toolbar sx={{ padding: "0 1.6rem !important" }}>
         <Box display="flex" flexGrow={1}>
           <Typography variant="h4" sx={{ ...navbarBrand }}>
             snap
@@ -32,7 +32,16 @@ const Navbar = () => {
           <Button sx={{ ...dropDownButton }}>About</Button>
         </Box>
         <Box>
-          <Button variant="outlined" sx={{ ...outLinedButton, border: "none" }}>
+          <Button
+            variant="outlined"
+            sx={{
+              ...outLinedButton,
+              borderColor: "white",
+              "&:hover": {
+                borderColor: "white",
+              },
+            }}
+          >
             Login
           </Button>
           <Button variant="outlined" sx={{ ...outLinedButton }}>

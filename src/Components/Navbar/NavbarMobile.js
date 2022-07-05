@@ -1,14 +1,29 @@
 import React, { useState } from "react";
-import { AppBar, Typography, IconButton, Toolbar, Drawer } from "@mui/material";
+import {
+  AppBar,
+  Typography,
+  IconButton,
+  Toolbar,
+  Drawer,
+  Box,
+  Button,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { navbarBrand, hamburgerButton } from "../../Classes/classes";
+import {
+  navbarBrand,
+  hamburgerButton,
+  dropDownButton,
+  outLinedButton,
+} from "../../Classes/classes";
+import { dropDownConfig } from "../../Models/DropDowns";
+import DropdownMobile from "./DropdownMobile";
 
 const NavbarMobile = () => {
   const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
   };
-  console.log(open);
+
   return (
     <AppBar
       position="static"
@@ -32,8 +47,57 @@ const NavbarMobile = () => {
         >
           <MenuIcon />
         </IconButton>
-        <Drawer anchor="right" open={open} onClose={toggleDrawer}>
-          
+        <Drawer
+          anchor="right"
+          open={open}
+          onClose={toggleDrawer}
+          sx={{
+            ".MuiDrawer-paper": {
+              padding: "1.4rem !important",
+              width: "50vw !important",
+            },
+          }}
+        >
+          <Box display="flex" flexDirection="row" justifyContent="flex-end">
+            <IconButton onClick={toggleDrawer}>
+              <img
+                src="intro-section-with-dropdown-navigation-main\intro-section-with-dropdown-navigation-main\images\icon-close-menu.svg"
+                alt=""
+              />
+            </IconButton>
+          </Box>
+          {dropDownConfig.map((config, index) => {
+            return <DropdownMobile key={index} config={config} />;
+          })}
+          <Button
+            variant="text"
+            sx={{
+              ...dropDownButton,
+              marginBottom: "0.8rem !important",
+            }}
+          >
+            <Typography sx={{ textAlign: "left !important", width: "100%" }}>
+              Careers
+            </Typography>
+          </Button>
+          <Button sx={{ ...dropDownButton, marginBottom: "0.8rem !important" }}>
+            <Typography sx={{ textAlign: "left !important", width: "100%" }}>
+              About
+            </Typography>
+          </Button>
+          <Button
+            variant="outlined"
+            sx={{
+              ...outLinedButton,
+              marginBottom: "0.4rem !important",
+              borderColor: "white",
+            }}
+          >
+            Login
+          </Button>
+          <Button variant="outlined" sx={{ ...outLinedButton }}>
+            Register
+          </Button>
         </Drawer>
       </Toolbar>
     </AppBar>

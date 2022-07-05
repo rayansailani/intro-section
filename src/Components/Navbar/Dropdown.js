@@ -45,6 +45,7 @@ const Dropdown = (props) => {
                 sx={{
                   marginLeft: "0.6rem !important",
                   marginBottom: "-8px !important",
+                  marginRight: "0.6rem !important",
                 }}
                 variant="body1"
               >

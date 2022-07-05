@@ -42,3 +42,7 @@ export const hamburgerButton = {
     background: "transparent !important",
   },
 };
+
+export const dropDownItemMobile = {
+  marginTop: "-0.4rem !important",
+};
