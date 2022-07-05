@@ -22,6 +22,7 @@ const DropdownMobile = (props) => {
           {props?.config.head}
         </Typography>
         <img
+          alt=""
           src={`intro-section-with-dropdown-navigation-main/intro-section-with-dropdown-navigation-main/images/icon-arrow-${
             !open ? "up" : "down"
           }.svg`}
