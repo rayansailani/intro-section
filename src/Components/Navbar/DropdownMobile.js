@@ -39,7 +39,7 @@ const DropdownMobile = (props) => {
                     marginLeft: `${
                       item.src ? "0.6rem !important" : "0 !important"
                     }`,
-                    marginBottom: "-8px !important",
+                    marginBottom: "-4px !important",
                   }}
                   variant="body2"
                 >

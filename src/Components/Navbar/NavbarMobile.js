@@ -90,6 +90,7 @@ const NavbarMobile = () => {
             sx={{
               ...outLinedButton,
               marginBottom: "0.4rem !important",
+              marginTop: "2rem !important",
               borderColor: "white",
             }}
           >
