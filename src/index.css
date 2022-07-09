@@ -3,4 +3,9 @@
 *::after {
   padding: 0 !important;
   margin: 0 !important;
+  /* overflow-x: hidden !important; */
+}
+
+body {
+  overflow-y: hidden;
 }

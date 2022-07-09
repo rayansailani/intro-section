@@ -46,3 +46,26 @@ export const hamburgerButton = {
 export const dropDownItemMobile = {
   marginTop: "-0.4rem !important",
 };
+
+export const textContentContainer = {
+  margin: { md: "7.4rem !important", xs: "1.6rem !important" },
+};
+
+export const textContentHeader = {
+  fontWeight: "bold",
+  marginBottom: "2rem !important",
+};
+
+export const textContentPara = {
+  color: "hsl(0, 0%, 41%)",
+  marginBottom: "2rem !important",
+};
+
+export const learnMoreButton = {
+  background: "black",
+  color: "white",
+  padding: "0.6rem 1rem !important",
+  textTransform: "none",
+  borderRadius: "0.6rem !important",
+  marginBottom: "3rem !important",
+};

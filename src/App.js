@@ -3,6 +3,7 @@ import { Container } from "@mui/system";
 import "./index.css";
 import Navbar from "./Components/Navbar/Navbar";
 import NavbarMobile from "./Components/Navbar/NavbarMobile";
+import MainContent from "./Components/MainContent/MainContent";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { mainContainer } from "./Classes/classes";
 const theme = createTheme({
@@ -17,6 +18,7 @@ const App = () => {
       <Container maxWidth="xl" disableGutters sx={{ ...mainContainer }}>
         <Navbar />
         <NavbarMobile />
+        <MainContent />
       </Container>
     </ThemeProvider>
   );
